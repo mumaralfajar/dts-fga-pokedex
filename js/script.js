@@ -8,15 +8,19 @@ const colors = {
 	electric: '#F8D030',
 	water: '#6890F0',
 	ground: '#E0C068',
-	rock: '#d5d5d4',
-	fairy: '#fceaff',
+	rock: '#B8A038',
+	fairy: '#EE99AC',
 	poison: '#A040A0',
 	bug: '#A8B820',
-	dragon: '#97b3e6',
-	psychic: '#eaeda1',
+	dragon: '#7038F8',
+	psychic: '#F85888',
 	flying: '#A890F0',
-	fighting: '#E6E0D4',
-	normal: '#A8A878'
+	fighting: '#C03028',
+	normal: '#A8A878',
+	ghost: '#705898',
+	dark: '#705848',
+	steel: '#B8B8D0',
+	ice: '#98D8D8'
 };
 const main_types = Object.keys(colors);
 
@@ -74,3 +78,21 @@ btn.addEventListener("click", function() {
 		alert("30 more Pokémons has been added!");
 	}
 });
+
+//Get the button
+var mybutton = document.getElementById("toTopBtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+function topFunction() {
+    window.scrollTo({top: 0, behavior: 'smooth'});
+}

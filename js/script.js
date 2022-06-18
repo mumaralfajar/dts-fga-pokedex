@@ -22,6 +22,7 @@ const colors = {
 	steel: '#B8B8D0',
 	ice: '#98D8D8'
 };
+
 const main_types = Object.keys(colors);
 
 const fetchPokemons = async () => {
@@ -75,7 +76,7 @@ btn.addEventListener("click", function() {
 	pokemons_number += 30;
 	fetchPokemons();
 	if (pokemons_number >= 60) {
-		alert("30 more Pokémons has been added!");
+		alert("30 more Pokémons have been added!");
 	}
 });
 

@@ -1,3 +1,4 @@
+const btn = document.getElementById('getBtn');
 const poke_container = document.getElementById('poke_container');
 const pokemons_number = 150;
 const colors = {
@@ -62,4 +63,8 @@ function createPokemonCard(pokemon) {
 	poke_container.appendChild(pokemonEl);
 }
 
-fetchPokemons();
+//fetchPokemons();
+
+btn.addEventListener("click", function() {
+	fetchPokemons();
+});

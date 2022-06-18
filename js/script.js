@@ -1,6 +1,7 @@
 const btn = document.getElementById('getBtn');
 const poke_container = document.getElementById('poke_container');
-const pokemons_number = 150;
+let pokemons_number = 0;
+let i = 0;
 const colors = {
 	fire: '#F08030',
 	grass: '#78C850',
@@ -20,9 +21,10 @@ const colors = {
 const main_types = Object.keys(colors);
 
 const fetchPokemons = async () => {
-	for (let i = 1; i <= 30; i++) {
+	for (i = 1; i <= pokemons_number; i++) {
 		await getPokemon(i);
 	}
+	return i = pokemons_number;
 };
 
 const getPokemon = async id => {
@@ -66,5 +68,9 @@ function createPokemonCard(pokemon) {
 //fetchPokemons();
 
 btn.addEventListener("click", function() {
+	pokemons_number += 30;
 	fetchPokemons();
+	if (pokemons_number >= 60) {
+		alert("30 Pokémons has been added!");
+	}
 });
